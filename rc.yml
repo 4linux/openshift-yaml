@@ -12,11 +12,11 @@ spec:
       name: busybox
       labels:
         app: busybox
-  spec:
-    containers:
-    - image: busybox
-      name: writer
-      command: ['sh', '-c', 'while true; do date >> /empty-dir/list; sleep 5; done']
-    - image: busybox
-      name: reader
-      command: ['sh', '-c', 'tail -f /empty-dir/list']
+    spec:
+      containers:
+      - image: busybox
+        name: writer
+        command: ['sh', '-c', 'while true; do date >> /empty-dir/list; sleep 5; done']
+      - image: busybox
+        name: reader
+        command: ['sh', '-c', 'tail -f /empty-dir/list']
