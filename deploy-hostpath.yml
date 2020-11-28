@@ -21,6 +21,7 @@ spec:
           claimName: pvc-hostpath
       containers:
       - image: alpine
+        imagePullPolicy: IfNotPresent
         name: alpine
         tty: true
         stdin: true
