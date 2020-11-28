@@ -15,8 +15,10 @@ spec:
     spec:
       containers:
       - image: busybox
+        imagePullPolicy: IfNotPresent
         name: writer
         command: ['sh', '-c', 'while true; do date >> /empty-dir/list; sleep 5; done']
       - image: busybox
+        imagePullPolicy: IfNotPresent
         name: reader
         command: ['sh', '-c', 'tail -f /empty-dir/list']
