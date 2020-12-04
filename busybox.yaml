@@ -13,3 +13,4 @@ spec:
     - "999999"
     image: alpine
     name: pod1
+    imagePullPolicy: IfNotPresent
